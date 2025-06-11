@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "FP8IXoYmfvM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rroki\\GitHub\\pixel-mp-player\\PixelMpPlayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rroki\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.17\\microsoft.net.illink.tasks.8.0.17.nupkg.sha512",
+    "C:\\Users\\rroki\\.nuget\\packages\\microsoft.netcore.platforms\\7.0.4\\microsoft.netcore.platforms.7.0.4.nupkg.sha512",
+    "C:\\Users\\rroki\\.nuget\\packages\\microsoft.web.webview2\\1.0.2651.64\\microsoft.web.webview2.1.0.2651.64.nupkg.sha512",
+    "C:\\Users\\rroki\\.nuget\\packages\\windowsapicodepackcore\\8.0.8\\windowsapicodepackcore.8.0.8.nupkg.sha512",
+    "C:\\Users\\rroki\\.nuget\\packages\\windowsapicodepackshell\\8.0.8\\windowsapicodepackshell.8.0.8.nupkg.sha512",
+    "C:\\Users\\rroki\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.17\\microsoft.netcore.app.runtime.win-x64.8.0.17.nupkg.sha512",
+    "C:\\Users\\rroki\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.17\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.17.nupkg.sha512",
+    "C:\\Users\\rroki\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.17\\microsoft.aspnetcore.app.runtime.win-x64.8.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}

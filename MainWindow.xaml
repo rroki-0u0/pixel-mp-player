@@ -1,0 +1,64 @@
+<Window x:Class="PixelMpPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="Pixel Motion Photo Player" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        AllowDrop="True"
+        Drop="Window_Drop"
+        DragEnter="Window_DragEnter">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Menu Bar -->
+        <Menu Grid.Row="0">
+            <MenuItem Header="_ファイル">
+                <MenuItem Header="_開く..." Click="OpenFile_Click" InputGestureText="Ctrl+O"/>
+                <Separator/>
+                <MenuItem Header="_終了" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_ツール">
+                <MenuItem Header="_デバッグ情報" Click="Debug_Click"/>
+            </MenuItem>
+            <MenuItem Header="_ヘルプ">
+                <MenuItem Header="_バージョン情報" Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        
+        <!-- Main Content Area -->
+        <Grid Grid.Row="1" x:Name="ContentGrid">
+            <!-- Welcome Screen -->
+            <StackPanel x:Name="WelcomePanel" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Pixel Motion Photo Player" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                <TextBlock Text="Motion Photo ファイルをドラッグ＆ドロップするか、" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBlock Text="「ファイルを開く」ボタンをクリックしてください" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                <Button Content="ファイルを開く" Click="OpenFile_Click" Padding="20,10"/>
+            </StackPanel>
+            
+            <!-- Image Display -->
+            <Image x:Name="ImageDisplay" Visibility="Collapsed" Stretch="Uniform"/>
+            
+            <!-- Video Display -->
+            <Grid x:Name="VideoContainer" Visibility="Collapsed">
+                <wv2:WebView2 x:Name="VideoDisplay" />
+                <TextBlock x:Name="VideoStatusText" Text="動画を読み込み中..." 
+                          HorizontalAlignment="Center" VerticalAlignment="Center"
+                          FontSize="16" Foreground="Gray"/>
+            </Grid>
+        </Grid>
+        
+        <!-- Control Panel -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" 
+                   x:Name="ControlPanel" Visibility="Collapsed" Margin="10">
+            <Button x:Name="ShowImageButton" Content="📷 静止画" Click="ShowImage_Click" Margin="5" IsEnabled="False"/>
+            <Button x:Name="ShowVideoButton" Content="🎬 動画" Click="ShowVideo_Click" Margin="5" IsEnabled="False"/>
+            <Button x:Name="PlayPauseButton" Content="▶️ 再生" Click="PlayPause_Click" Margin="5" IsEnabled="False"/>
+            <Button x:Name="StopButton" Content="⏹️ 停止" Click="Stop_Click" Margin="5" IsEnabled="False"/>
+            <TextBlock x:Name="FileInfoText" VerticalAlignment="Center" Margin="20,0,0,0" FontSize="12"/>
+        </StackPanel>
+    </Grid>
+</Window>
