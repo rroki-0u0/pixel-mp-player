@@ -35,7 +35,7 @@ Motion Photo は Google Pixel で撮影される、JPEG画像内にMP4動画を�
 ### ビルド方法
 `build.bat` を実行
 
-### インストーラー作成
+### インストーラー作成 (未実施)
 
 1. [Inno Setup](https://jrsoftware.org/isinfo.php) をインストール
 2. `installer/setup.iss` をInno Setup Compilerで開く
@@ -54,5 +54,4 @@ Motion Photo は Google Pixel で撮影される、JPEG画像内にMP4動画を�
 ## 技術的詳細
 
 Motion Photoの構造:
-- **従来形式**: JPEG画像データ + MP4動画データ (一つのファイル)
-- **新形式**: JPEG画像データ (カバー) + 動画データ (メタデータ)
+- JPEG画像データ + MP4動画データ (一つのファイル)
